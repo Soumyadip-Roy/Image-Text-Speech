@@ -26,8 +26,8 @@ async function setup(){
         canvas.height=video.height;
 
         //2. img frm vid
-        document.addEventListener("keypress",async e=>{
-            if(e.code!=="Space") rerurn
+        document.getElementById('clickme').addEventListener("click",async e=>{
+            e.preventDefault();
             canvas.getContext("2d").drawImage(video,0,0,video.width,video.height);
 
             // const obj = await worker.recognize(canvas);
